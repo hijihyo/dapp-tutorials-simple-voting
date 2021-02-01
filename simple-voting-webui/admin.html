@@ -1,0 +1,100 @@
+<html>
+<head>
+    <script src="bower_components/web3/dist/web3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="simplevoting.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <h1><b>SimpleVoting - Admin</b></h1>
+        </tr>
+        <tr>
+            <table border="0" cellpadding="0" id="currentStatus">
+                <tr>
+                    <td><b>Current statsus :</b></td>
+                    <td id="currentStatusMessage"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </tr>
+        <br>
+        <tr></tr>
+        <tr>
+            <table border="0" cellpadding="0" id="unlockAdmin">
+                <tr>
+                    <td><b>Admin address :</b></td>
+                    <td><input type="text" id="adminAddress" width="400"></td>
+                    <td><b>password :</b></td>
+                    <td><input type="text" id="adminPassword" width="400"></td>
+                    <td><button onclick="unlockAdmin()">Unlock account</button></td>
+                    <td id="unlockAdminMessage"></td>
+                </tr>
+            </table>
+        </tr>
+        <br>
+        <tr><b>Register voter</b></tr>
+        <tr>
+            <table border="0" cellpadding="0" id="registerVoter">
+                <tr>
+                    <td><b>Voter address :</b></td>
+                    <td><input type="text" id="voterAddress" width="400"></td>
+                    <td><button onclick="registerVoter()">Register</button></td>
+                    <td id="registerVoterMessage"></td>
+                </tr>
+            </table>
+        </tr>
+        <br>
+        <tr><b>Check registration</b></tr>
+        <tr>
+            <table border="0" cellpadding="0" id="checkRegistration">
+                <tr>
+                    <td><b>Address :</b></td>
+                    <td><input type="text" id="address" width="400"></td>
+                    <td><button onclick="checkRegistration()">Check registration</button></td>
+                    <td id="checkRegistrationMessage"></td>
+                </tr>
+            </table>
+        </tr>
+        <br>
+        <tr><b>Proposals registration session</b></tr>
+        <tr>
+            <table border="0" cellpadding="0" id="manageProposals">
+                <tr>
+                    <td><button onclick="startProposalsRegistration()">Start</button></td>
+                    <td><button onclick="endProposalsRegistration()">End</button></td>
+                    <td id="manageProposalsMessage"></td>
+                </tr>
+            </table>
+        </tr>
+        <br>
+        <tr><b>Voting session</b></tr>
+        <tr>
+            <table border="0" cellpadding="0" id="manageVoting">
+                <tr>
+                    <td><button onclick="startVotingSession()">Start</button></td>
+                    <td><button onclick="endVotingSession()">End</button></td>
+                    <td id="manageVotingMessage"></td>
+                </tr>
+            </table>
+        </tr>
+        <br>
+        <tr><b>Tally votes</b></tr>
+        <tr>
+            <table border="0" cellpadding="0" id="tallyVotes">
+                <tr>
+                    <td><button onclick="tallyVotes()">Tally votes</button></td>
+                    <td id="tallyVotesMessage"></td>
+                </tr>
+            </table>
+        </tr>
+        <br>
+        <tr></tr>
+        <tr>
+            <table border="0" cellpadding="0" width="200" id="resultsTable"></table>
+        </tr>
+    </table>
+</body>
+</html>
